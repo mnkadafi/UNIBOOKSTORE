@@ -83,7 +83,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a href="tambah_buku.php" class="text-white btn btn-primary text-left rounded-pill">
+            <a href="tambah_penerbit.php" class="text-white btn btn-primary text-left rounded-pill">
                 <i class="fa fa-plus" aria-hidden="true"></i> 
                 <span class="sr-only"></span>Tambah
             </a>
@@ -134,8 +134,8 @@
                                 <?php echo $data['telepon'] ?>
                             </td>
                             <td>
-                                <a type="button" href="edit_buku.php?id_buku=<?php echo $data['id_buku'];?>" class="btn btn-primary btn-circle btn-sm btn-warning"><i class="fa fa-edit"></i></a>                                
-                                <a type="button" href="hapus_buku.php?id_buku=<?php echo $data['id_buku'];?>" class="btn btn-primary btn-circle btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                <a type="button" href="edit_penerbit.php?id_penerbit=<?php echo $data['id_penerbit'];?>" class="btn btn-primary btn-circle btn-sm btn-warning"><i class="fa fa-edit"></i></a>                                
+                                <a type="button" onclick="return confirm('Apakah yakin data akan di hapus?')"  href="hapus_penerbit.php?id_penerbit=<?php echo $data['id_penerbit'];?>" class="btn btn-primary btn-circle btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php

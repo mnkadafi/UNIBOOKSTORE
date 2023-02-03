@@ -68,9 +68,9 @@
 
                         if(isset($_POST['keyword'])){
                             $keyword = $_POST['keyword'];
-                            $result = mysqli_query($conn, "SELECT * FROM tbl_buku as b LEFT JOIN tbl_penerbit as p ON b.id_penerbit = p.id_penerbit WHERE b.nama_buku like '%".$keyword."%'");
+                            $result = mysqli_query($conn, "SELECT * FROM tbl_buku as b LEFT JOIN tbl_kategori as k ON b.id_kategori = k.id_kategori LEFT JOIN tbl_penerbit as p ON b.id_penerbit = p.id_penerbit WHERE b.nama_buku like '%".$keyword."%'");
                         } else {
-                            $result = mysqli_query($conn, "SELECT * FROM tbl_buku as b LEFT JOIN tbl_penerbit as p ON b.id_penerbit = p.id_penerbit");
+                            $result = mysqli_query($conn, "SELECT * FROM tbl_buku as b LEFT JOIN tbl_kategori as k ON b.id_kategori = k.id_kategori LEFT JOIN tbl_penerbit as p ON b.id_penerbit = p.id_penerbit");
                         }
 
                         if (!$result) {
@@ -88,7 +88,7 @@
                                 <?php echo $data['id_buku'] ?>
                             </td>
                             <td>
-                                <?php echo $data['kategori'] ?>
+                                <?php echo $data['nama_kategori'] ?>
                             </td>
                             <td>
                                 <?php echo $data['nama_buku'] ?>

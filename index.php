@@ -1,4 +1,4 @@
-<?php include 'config.php' ?>
+<?php include 'config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,13 @@
 
 </head>
 
-<?php include 'navigation.php' ?>
+<?php
+include 'navigation.php';
+
+if(isset($_POST['keyword'])) {
+    $keyword = $_POST['keyword'];
+}
+?>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
